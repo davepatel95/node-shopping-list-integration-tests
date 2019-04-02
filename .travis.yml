@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: oCkJYds+ep8Ub7X+VcqmZ+8IGIuqjJrlgMMvQX9iQnhYMSkgwgq0Y124EeQPbNM8nnEMJmO/ORW8RbuTqfjA/7IvRiqN5nCOgIT/dkFFeUMH5lRIfaXRHWojqz/ZePRU8/cqKSXdh83ivNY+LtDsewsIImaxKL7US8Kwx4E7ZPeRWk9zQwVdPfXou/THEAmBwvoi7RhXOeHe6kILuv7nxu0/gUhg8UZyHiqhlymS1XLQ18LisVaHUuSp2BoUWy+VKzmTVMe857pB3E/CWqPej83LCizgA/VCjwc+sl7JuyEpna1pE70EJs2z16EOF2mGvmkwdZ8Sk0LANM78x7UYwu8rfNGNbm0gvXmD3GQXHFFicCjEO8WBOS/PvIbnV57pfaw5hnPZ6hunI/1c8yIcPAJ1CqhPp66jVxD4F9O/U4+bQMvx5XDY2Gdg1nug5eGRygmaZg1BDdblMeHKQW79Z04I606IqERCe0a2OHXaZtcQPBE+4C5+7Wyuq9m1ErRdVxND18ooenH/yHppVFRgDenegW59ezmgFvMz5NPKEV56M1V1h8DsjGcoQ48VoS0IjUin+vL9uTI7fM/kPBb4/J1zcJ+isFlpxOx0RgI/lwLmGVXLld1KBhG931LrX1EO4QOmktF6u9L7H58S1hRZb4naYAlImeeM3J15/WcuUeA=
+  app: node-shopping-list-integration-tests
+  on: https://git.heroku.com/dry-island-99814.git
+    repo: davepatel95/node-shopping-list-integration-tests
