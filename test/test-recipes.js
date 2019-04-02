@@ -21,7 +21,7 @@ describe('Recipes', function() {
         return chai
             .request(app)
             .get("/recipes")
-            .then(function() {
+            .then(function(res) {
                 expect(res).to.have.status(200);
                 expect(res).to.be.json;
                 expect(res.body).to.be.a("array");
@@ -29,7 +29,7 @@ describe('Recipes', function() {
                 expect(res.body.length).to.be.at.least(1);
                 
                 const expectedKeys = ["id", "name","ingredients"];
-                res.body.forEach(function() {
+                res.body.forEach(function(item) {
                     expect(item).to.be.a("object");
                     expect(item).to.include.keys(expectedKeys);
                 });
@@ -65,10 +65,7 @@ describe('Recipes', function() {
                     .send(updateData)
             })
             .then(function(res) {
-                expect(res).to.have.status(200);
-                expect(res).to.be.json;
-                expect(res.body).to.be.a('object');
-                expect(res.body).to.deep.equal(updateData);
+                expect(res).to.have.status(204);
             });
     });
 
